@@ -1,26 +1,28 @@
-//wap to enter record for an employee and display it.
- #include<stdio.h>
- #include<conio.h>
-  struct emp
-  {
-  char name[20];
-  int age;
-  float sal;
-  };
-  void main()
-  {
-  struct emp e;
-  clrscr();
-  printf("enter name of employee");
-  gets(e.name);
-  printf("enter age of an employee");
-  scanf("%d",&e.age);
-  printf("\n enter salary");
-  scanf("%f",&e.sal);
-  printf("\n entered record is");
-  printf("\n name=");
-  puts(e.name);
-  printf("\n age = %d",e.age);
-  printf("\n sal = %d",e.sal);
-  getch();
-  }
+//wap to enter record of 5 employee and display it.
+#include<stdio.h>
+#include<conio.h>
+ void main()
+ {
+ int i;
+ struct emp
+ {
+ int age;
+ int sal;
+ }e[5];
+ printf("\n enter salary of 5 employee\n");
+ for(i=1;i<=5;i++)
+ {
+ printf("enter age of %d employee",i);
+ scanf("%d",&e[i].age);
+ printf("enter salary of %d employee",i);
+ scanf("%d",&e[i].sal);
+ }
+ printf("\n entered record is");
+ for(i=1;i<=5;i++)
+ {
+ printf("\n age of %d employee is =%d",i,e[i].age);
+ printf("\n salary of %d employee =%d",i,e[i].sal);
+ printf("\n");
+ }
+ getch();
+ }
