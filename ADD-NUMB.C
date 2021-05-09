@@ -1,20 +1,20 @@
  //wap to add two numbers
  #include<stdio.h>
- #include<conio.h>
+//  #include<conio.h>
   int add (int a,int b)
   {
   int c;
   c = a + b;
   return(c);
   }
-   void main()
+   int main()
   {
   int a,b,d;
   int add(int a,int b);
-  clrscr();
+  // clrscr();
   printf("\n enter 2 numbers");
   scanf("%d%d",&a,&b);
   d =add(a,b);
   printf("\n result =%d",d);
-  getch();
+  getc(stdin);
   }
