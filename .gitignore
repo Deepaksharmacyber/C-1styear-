@@ -4,3 +4,6 @@ a.out
 Makefile
 *.exe
 *.o
+.vs
+cmake_install.cmake
+.vscode
