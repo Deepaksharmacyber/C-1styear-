@@ -1,15 +1,18 @@
 //wap to check whether a number is even or odd
 #include<stdio.h>
-#include<conio.h>
- void main()
+
+ int main()
 {
  int n;
- clrscr();
+ 
  printf("\n enter a number");
+ fflush(stdout);
  scanf("%d",&n);
  if(n%2 ==0)
   printf("\n even number");
+  fflush(stdout);
   else
   printf("\n odd number");
-  getch();
+  fflush(stdout);
+  getc(stdin);
  }

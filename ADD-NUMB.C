@@ -1,6 +1,8 @@
+
+
  //wap to add two numbers
  #include<stdio.h>
-//  #include<conio.h>
+ 
   int add (int a,int b)
   {
   int c;
@@ -11,10 +13,13 @@
   {
   int a,b,d;
   int add(int a,int b);
-  // clrscr();
+  
   printf("\n enter 2 numbers");
+  fflush(stdout);
   scanf("%d%d",&a,&b);
   d =add(a,b);
   printf("\n result =%d",d);
+  fflush(stdout);
   getc(stdin);
+
   }

@@ -1,11 +1,12 @@
 //wap to multiply 2 matrix of size 3*3 .
 #include<stdio.h>
-#include<conio.h>
- void main()
+
+ int main()
  {
  int a[3][3],b[3][3],c[3][3],i,j,k;
- clrscr();
+ 
  printf("enter elements in matrix a");
+ fflush(stdout);
  for(i=0;i<3;i++)
  {
  for(j=0;j<3;j++)
@@ -14,6 +15,7 @@
  }
 }
  printf("enter elements in matrix b");
+ fflush(stdout);
  for(i=0;i<3;i++)
  {
  for(j=0;j<3;j++)
@@ -22,6 +24,7 @@
  }
 }
  printf("\n resultant matrix is =");
+ fflush(stdout);
  for(i=0;i<3;i++)
  {
  for(j=0;j<3;j++)
@@ -32,8 +35,10 @@
  c[i][j]=c[i][j]+a[i][k]*b[k][j];
  }
  printf("%d\t",c[i][j]);
+ fflush(stdout);
  }
  printf("\n");
+ fflush(stdout);
  }
- getch();
+ getc(stdin);
  }

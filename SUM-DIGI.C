@@ -1,11 +1,12 @@
 //wap to find the sum of the digits of a number.
 #include<stdio.h>
-#include<conio.h>
- void main()
+
+ int  main()
 {
   int n,r,s=0;
-  clrscr();
+  
   printf("enter any number");
+  fflush(stdout);
   scanf("%d",&n);
   while(n>1)
 {
@@ -14,5 +15,6 @@
   n = n / 10;
 }
   printf("\n sum of digits = %d",s);
-  getch();
+  fflush(stdout);
+  getc(stdin);
 }

@@ -1,6 +1,6 @@
 //wap to add two numbers(call by value)
 #include<stdio.h>
-#include<conio.h>
+
 
  int add(int a, int b)
  {
@@ -8,14 +8,16 @@
   c = a + b;
   return(c);
   }
-   void main()
+   int main()
   {
    int a,b,d;
    int add (int a, int b);
-   clrscr();
+   
    printf("enter 2 numbers");
+   fflush(stdout);
    scanf("%d%d",&a,&b);
    d = a + b;
    printf("\n result = %d",d);
-   getch();
+   fflush(stdout);
+   getc(stdin);
   }

@@ -1,18 +1,21 @@
 //wap to check whether a string is palindrome or not.
 #include<stdio.h>
-#include<conio.h>
+
 #include<string.h>
- void main()
+ int  main()
  {
  char a[20],b[20];
- clrscr();
+ 
  printf("enter any string");
+ fflush(stdout);
  gets(a);
  strcpy(b,a);
- strrev(b);
+ strsep(b);
  if (strcmp(a,b)==0)
     printf("palindrome");
+    fflush(stdout);
     else
      printf(" not palindrome");
-     getch();
+     fflush(stdout);
+     getc(stdin);
  }

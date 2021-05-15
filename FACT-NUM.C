@@ -1,6 +1,6 @@
 //wap to find factorial of a number
 #include<stdio.h>
-#include<conio.h>
+
 
 int fact(int n)
 {
@@ -12,14 +12,16 @@ int fact(int n)
  }
  return(f);
  }
- void main()
+ int main()
  {
  int m,d;
  int fact(int m);
- clrscr();
+ 
  printf("enter any number");
+ fflush(stdout);
  scanf("%d",&m);
  d = fact(m);
  printf("\n result = %d",d);
- getch();
+ fflush(stdout);
+ getc(stdin);
  }
