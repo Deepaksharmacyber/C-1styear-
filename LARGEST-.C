@@ -12,7 +12,7 @@
  t = c;
  return(t);
  }
-  imt  main()
+  int  main()
   {
   int m,n,o,p;
   int largest (int,int,int);
