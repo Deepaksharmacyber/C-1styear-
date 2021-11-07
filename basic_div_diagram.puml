@@ -1,0 +1,5 @@
+@startuml
+start
+: "quotent = 1"
+stop
+@enduml
