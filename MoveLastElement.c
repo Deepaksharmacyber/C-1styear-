@@ -30,7 +30,7 @@ void push(struct Node** head_ref,int new_data)
     struct Node* new_node= malloc(sizeof(struct Node));
     new_node->data = new_data;
     new_node->next = (*head_ref);
-    (*head->ref) = new_node;
+    (*head_ref) = new_node;
 }
 
 void printList(struct Node*node)
