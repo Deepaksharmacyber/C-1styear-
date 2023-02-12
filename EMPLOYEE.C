@@ -6,7 +6,7 @@
  int i;
  struct emp
   {
-     int age;
+    int age;
     int sal;
   }e[5];
   printf("\n enter salary of 5 employee\n");

@@ -16,12 +16,12 @@ void linkedListTraversal(struct Node *ptr)
     
 }
 // case 1
-/* struct Node *insertAtFirst(struct Node *head,int data){
+struct Node *insertAtFirst(struct Node *head,int data){
     struct Node * ptr = (struct Node *)malloc(sizeof(struct Node *));
     ptr->data=data;
     ptr->next=head;
     return ptr;
-} */
+} 
 
 
 //case 2 
@@ -59,7 +59,7 @@ void linkedListTraversal(struct Node *ptr)
  */
 
 //case 4 
-struct Node *insertAfterNode(struct Node *head,struct Node *prevNode,int data){
+/* struct Node *insertAfterNode(struct Node *head,struct Node *prevNode,int data){
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
 
@@ -67,7 +67,7 @@ struct Node *insertAfterNode(struct Node *head,struct Node *prevNode,int data){
     prevNode->next = ptr ;
 
     return head; 
-}
+} */
 int main()
 {
     struct Node *head;
@@ -96,10 +96,10 @@ int main()
     printf("linked List before insertion\n");
     linkedListTraversal(head);
 
-   // head = insertAtFirst(head,26);
+   head = insertAtFirst(head,26);
    //head = insertAtIndex(head,56,2);
    //head = insertAtEnd(head,76);
-   head = insertAfterNode(head,third,45);
+   //head = insertAfterNode(head,third,45);
    printf("\nlinked List after insertion\n");
    linkedListTraversal(head);
 

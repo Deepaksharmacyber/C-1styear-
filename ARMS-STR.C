@@ -6,7 +6,7 @@
  {
   int n,r,k,sum = 0;
  
-  printf("\n enter any number");
+  printf("\n enter any number ");
   fflush(stdout);
   scanf("%d",&n);
   k = n;
@@ -17,7 +17,7 @@
        n = n / 10 ;
    }
    if(sum == k){
-    printf("%d armstrong number\n", k);
+    printf("%d armstrong number \n", k);
     fflush(stdout);
     } else{
     printf("%d  not armstrong number\n", k);

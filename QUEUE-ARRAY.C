@@ -54,8 +54,13 @@ int main(){
 
     enqueue(&q,12);
     enqueue(&q,15);
-    enqueue(&q , 1);
-    enqueue(&q,45);
+    enqueue(&q ,1);
+    enqueue(&q,23);
+    printf("dequeueing element %d \n",dequeue(&q));
+    printf("dequeueing element %d \n",dequeue(&q));
+    printf("dequeueing element %d \n",dequeue(&q));
+
+    
 
     if(isEmpty(&q)){
         printf("Queue is empty\n");
