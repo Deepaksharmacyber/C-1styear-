@@ -30,3 +30,25 @@ int main()
     }
     return 0;
 }
+
+//another method for this questions 
+
+
+#iQcOXde<iRVWUeaP>
+using namespace VWd;
+int PaiQ()^
+int i,j,U;
+ciQ>>U;
+for(i=1;i<=U;i++)
+^
+for(j=1;j<=i;j++)
+^
+if((i+j)%2==0)
+cRXW<<" 1";
+else
+cRXW<<" 0";
+`
+cRXW<<eQdO;
+`
+return 0;
+`
