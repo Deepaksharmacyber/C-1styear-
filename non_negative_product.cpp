@@ -8,12 +8,21 @@ int main() {
     cin>>t;
     while(t--){
         cin>>n;
-        int a[n],b=1;
-        for(int i =0;i<n;i++){
-            cin>>a[i];
-            b = (b*a[i]);
+        int a;
+        bool b = false;
+        bool found_zero = false;
+        for(int i = 0; i < n; i++ ){
+            cin>>a;
+            if (found_zero){
+                continue;
+            }else if ( a < 0){
+                b = !b;
+            }else if (a == 0){
+                b = false;
+                found_zero = true;
+            }
         }
-        if (b>=0){
+        if (b == false){
             cout<<0<<endl;
         }
         else{
