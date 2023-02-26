@@ -1,0 +1,23 @@
+//wap to print factorial of a number by using function in c++
+
+
+#include <iostream>
+
+using namespace std;
+
+int fact(int n){
+    int factorial =1 ;
+    for(int i=2;i<=n;i++){
+        factorial*=i;
+    }
+    return factorial;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<fact(n);
+
+    return 0;
+}
