@@ -1,13 +1,12 @@
-
+//wap to print number in words 
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main(){
     int n ;
     cin>>n;
-    if(1<=n<=9){
+    if((1<=n)&&(n<=9)){
         if(n==1){
             cout<<"one";
         }
@@ -39,7 +38,7 @@ int main(){
     else if(n>9){
         cout<<"greater than 9";
     }
-
-
     return 0;
 }
+
+
