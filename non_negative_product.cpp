@@ -4,25 +4,25 @@
 using namespace std;
 
 int main() {
-    int t , n;
-    cin>>t;
-    while(t--){
-        cin>>n;
-        int a;
-        bool b = false;
+    int test_count = 0, number_count = 0;
+    cin>>test_count;
+    while(test_count--){
+        cin>>number_count;
+        int input_number = 0;
+        bool is_negative_count_odd = false;
         bool found_zero = false;
-        for(int i = 0; i < n; i++ ){
-            cin>>a;
+        for(int index = 0; index < number_count; index++ ){
+            cin>>input_number;
             if (found_zero){
                 continue;
-            }else if ( a < 0){
-                b = !b;
-            }else if (a == 0){
-                b = false;
+            }else if ( input_number < 0){
+                is_negative_count_odd = !is_negative_count_odd;
+            }else if (input_number == 0){
+                is_negative_count_odd = false;
                 found_zero = true;
             }
         }
-        if (b == false){
+        if (is_negative_count_odd == false){
             cout<<0<<endl;
         }
         else{
