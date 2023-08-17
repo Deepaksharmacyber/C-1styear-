@@ -1,0 +1,51 @@
+// C++ program to count number of nodes in a circular
+// linked list.
+#include<bits/stdc++.h>
+using namespace std ;
+
+class Node{
+	public:
+	int data;
+	Node *next;
+};
+
+void push(Node **head_ref,int data){
+	Node *ptr1  = new Node();
+	Node *temp = *head_ref;
+	ptr1->data  = data;
+	ptr1->next  = *head_ref;
+
+	if(*head_ref !=NULL){
+		while(temp->next!=*head_ref){
+			temp=temp->next;
+		}
+		temp->next=ptr1;
+	}
+	else{
+		ptr1->next=ptr1;
+	}
+	*head_ref = ptr1;
+}
+
+int countNodes(Node *head){
+	Node *temp = head;
+	int result = 0 ;
+	if (head!=NULL){
+		do{
+			temp = temp->next;
+			result++;
+		}while(temp!=head);
+	}
+	return result;
+}
+
+int main(){
+	Node *head = NULL;
+	push(&head,12);
+	push(&head,56);
+	push(&head,2);
+	push(&head,11);
+
+	cout<<countNodes(head);
+	return 0;
+}
