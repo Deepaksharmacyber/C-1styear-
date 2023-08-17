@@ -6,22 +6,21 @@ using namespace std ;
 class Node{
     public :
     int data;
-    Node* next;
-    Node* prev;
+    Node *next;
 };
 
-Node* addtoempty(Node* last,int data){
+void addtoempty(Node *&last,int data){
     if(last!=NULL){
-        return last;
+        return;
     }
     Node* temp = new Node();
     temp->data = data;
     last       = temp;
     temp->next = last;
-    return last;
+    return ;
 }
 
-Node* addBegin(Node* last ,int data){
+void addBegin(Node *&last ,int data){
     if(last==NULL){
         return addtoempty(last,data);
     }
@@ -30,10 +29,10 @@ Node* addBegin(Node* last ,int data){
     temp->data = data;
     temp->next = last->next;
     last->next = temp;
-    return last;
+    return;
 }
 
-Node* addEnd(Node* last,int data){
+void addEnd(Node *&last,int data){
     if(last==NULL){
         return addtoempty(last,data);
     }
@@ -42,12 +41,12 @@ Node* addEnd(Node* last,int data){
     temp->next = last->next;
     last->next = temp;
     last=temp;
-    return last;
+    return;
 }
 
-Node* addafter(Node* last,int data,int item){
+void addafter(Node *&last,int data,int item){
     if(last==NULL){
-        return NULL;
+        return;
     }
 
     Node* temp,*p;
@@ -61,12 +60,12 @@ Node* addafter(Node* last,int data,int item){
             if (p == last){
                 last = temp;
             }
-            return last;
+            return;
         }
         p=p->next;
     }while(p!=last->next);
     cout<<item<<" not present in this list"<<endl;
-    return last;
+    return;
 }
 
 void traverse(Node* last){
@@ -84,12 +83,12 @@ void traverse(Node* last){
 
 int main(){
     Node* last = NULL;
-    last = addtoempty(last,6);
-    last = addBegin(last,4);
-    last = addBegin(last,2);
-    last = addEnd(last,8);
-    last = addEnd(last,12);
-    last = addafter(last,10,22);
+    addtoempty(last,6);
+    addBegin(last,4);
+    addBegin(last,2);
+    addEnd(last,8);
+    addEnd(last,12);
+    addafter(last,10,8);
 
     traverse(last);
     return 0;
